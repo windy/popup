@@ -1,0 +1,7 @@
+require 'popup/exceptions'
+require 'popup/popup'
+#~ require 'popup/window_factory'
+require 'popup/file_ext'
+require 'popup/file_popup'
+require 'popup/alert_popup'
+require 'popup/confirm_popup'

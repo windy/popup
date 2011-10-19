@@ -1,0 +1,13 @@
+title:
+  xp: hello
+  win7: 选择
+  chrome: 打开
+edit:
+  type: text_field
+  default_locators:
+    class: Edit
+    instance: "1"
+confirm:
+  type: button
+  default_locators:
+    text: 打开(&O)
