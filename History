@@ -1,0 +1,4 @@
+0.0.6
+* modify watir depency from 1.6.5 to any version.
+* add save as popup type.save
+* [fix bug] ruby1.9.2 coding utf-8 descripe.
