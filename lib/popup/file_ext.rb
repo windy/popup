@@ -7,7 +7,7 @@ module ATT
     
     private
     def check_file_not_exist?(file_path)
-      raise FileNotFoundError,"#{file_path} has existed" if File.file?( window_full_path(file_path) )
+      raise FileAlreadyExistError,"#{file_path} has existed" if File.file?( window_full_path(file_path) )
     end
     
     private
