@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.files += Dir.glob("spec/**/*")
   s.files += Dir.glob("support/**/*")
   s.files += ["Rakefile","README.md"]
-  s.homepage = %q{http://200.200.0.35:81/svn/popup}
+  s.homepage = %q{https://github.com/windy/popup}
   s.require_paths = ["lib"]
   s.add_dependency(%q<rautomation>)
   s.add_dependency(%q<ffi>)
