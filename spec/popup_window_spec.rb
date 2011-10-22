@@ -1,6 +1,4 @@
 require 'spec_helper'
-gem "watir","1.6.5"
-require 'watir'
 describe ATT::PopupWindow do
   it '#listen' do
     b = TestBrowser.get

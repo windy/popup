@@ -6,6 +6,11 @@ module ATT
     end
     
     private
+    def check_file_not_exist?(file_path)
+      raise FileNotFoundError,"#{file_path} has existed" if File.file?( window_full_path(file_path) )
+    end
+    
+    private
     def window_full_path(file_path)
       path = file_path
       unless Pathname.new(file_path).absolute?

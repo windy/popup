@@ -1,6 +1,7 @@
 $LOAD_PATH.unshift File.join(__FILE__,'..','..','lib')
 require 'popup'
 require 'rspec'
+require 'watir'
 ATT::Config.root = File.join(__FILE__,'..','..','support')
 
 require 'webserver'
@@ -12,7 +13,7 @@ class TestBrowser
       @browser = Watir::Browser.new()
       @browser.goto("http://localhost:#{@port}/file.html")
     end
-    at_exit { close }
+    at_exit { close rescue nil }
     @browser
   end
   def self.start_server

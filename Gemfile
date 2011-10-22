@@ -7,5 +7,5 @@ gem "rautomation"
 gem "active_support"
 group :develop do
   gem "rspec"
-  gem "watir","1.6.5"
+  gem "watir"
 end

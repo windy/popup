@@ -1,8 +1,9 @@
+# coding: utf-8
 require 'pathname'
 module ATT
   class FilePopup < Popup
     include FileExt
-    CONFIRM_TEXT = [ "OPEN", "打开", "Open" ]
+    CONFIRM_TEXT = [ "OPEN", "打开", "Open","保存","Save","SAVE" ]
 # Set File Popup with file_path, then click confirm button.
 # @param file_path
 # @return: none

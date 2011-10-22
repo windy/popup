@@ -1,18 +1,17 @@
 module ATT
-  class SavePopup < Popup
-    include FileExt
-    # TODO:
+  # for save as dialog
+  class SavePopup < FilePopup
+
     # Save diaglog as a file 
     # if +file_path+ is relative path, it will be expand to abosulte path join with ATT::Config.root
     # @param: file_path
-    def saveas(file_path)
-      confirm_button.click
+    def set(file_path)
+      check_file_not_exist?(file_path)
+      set_text(file_path)
+      click_confirm
     end
     
-    alias set click
-
-    def confirm_button # :nodoc:
-      @window.button(:instance=>1)
-    end
+    alias click set
+    alias saveas set
   end
 end
