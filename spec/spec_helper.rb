@@ -16,6 +16,17 @@ class TestBrowser
     at_exit { close rescue nil }
     @browser
   end
+  
+  def self.get2(type= :ie)
+    @server || start_server
+    if @browser2.nil?
+      @browser2 = Watir::Browser.new()
+      @browser2.goto("http://localhost:#{@port}/file.html")
+    end
+    at_exit { @browser2.close rescue nil }
+    @browser2
+  end
+  
   def self.start_server
     @server = PopupServer.new
     @port = @server.port

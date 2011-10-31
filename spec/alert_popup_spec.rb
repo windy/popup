@@ -19,4 +19,15 @@ describe ATT::AlertPopup do
     alert = @b.button(:id,"alert_popup")
     ATT::AlertPopup.find_when { alert.click_no_wait }.click
   end
+  
+  it "#find_when in one block" do
+    alert = @b.button(:id,"alert_popup")
+    b2 = TestBrowser.get2
+    alert2 = b2.button(:id,"alert_popup")
+    ATT::AlertPopup.find_when {
+      ATT::AlertPopup.find_when { alert2.click_no_wait }.click
+      alert.click_no_wait
+    }.click
+  end
+  
 end
