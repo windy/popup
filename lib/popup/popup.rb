@@ -27,10 +27,12 @@ module ATT
     @@windows = nil
     RAutomation::Window.wait_timeout = Config::timeout
     ENV["RAUTOMATION_ADAPTER"] = "autoit"
+    
     def initialize(window) # :nodoc: 
       @window = window
     end
     
+    attr_reader :window
 # Get a popup between record() and find(),
 # * If not found, it will raise +WindowNotFoundError
 # * Else, if found more than one windows, it will raise MutliWindowsMatchError
