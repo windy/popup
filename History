@@ -1,3 +1,6 @@
+0.0.9
+* support default file path at SavePopup#set
+
 0.0.6
 * modify watir depency from 1.6.5 to any version.
 * add save as popup type.save
